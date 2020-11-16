@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} {{ keyword }} | Search {% endblock %} {% block body %}
+
+<h1>Search result for '{{ keyword }}'</h1>
+<hr />
+
+<ul>
+  {% for entry in results %}
+  <li>
+    <a href="/wiki/{{ entry }}"> {{ entry }} </a>
+  </li>
+  {% empty %}
+  <h4>No entry found with '{{ keyword }}'.</h4>
+  <a href="{% url 'new_entry' %}">Create One</a>
+  {% endfor %}
+</ul>
+
+{% endblock %}

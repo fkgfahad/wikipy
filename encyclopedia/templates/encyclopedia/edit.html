@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Edit {{title}} {% endblock %} {% block body %}
+
+<h1>Edit '{{title}}'</h1>
+<hr />
+
+<form class="col-10" method="POST" action="/edit/{{title}}">
+  {% csrf_token %}
+  <fieldset class="form-group">
+    <textarea class="form-control" name="content" placeholder="Content" rows="10" required>{{content}}</textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="submit" value="Save Edit" />
+  </fieldset>
+</form>
+
+{% endblock %}
