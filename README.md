@@ -1,4 +1,4 @@
 # Wikipy
 
 
-[Youtube Demo](https://www.youtube.com/watch?v=OS-wQiVp4p0)
+[Youtube Demo](https://youtu.be/OS-wQiVp4p0)
